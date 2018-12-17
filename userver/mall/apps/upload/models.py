@@ -7,7 +7,7 @@ from django.contrib.auth.models import AbstractUser
 
 
 class Audit(models.Model):
-    username = models.IntegerField(max_length=11, verbose_name='手机号')
+    username = models.CharField(max_length=11, verbose_name='手机号')
     real_name = models.CharField(max_length=12, verbose_name='真实姓名')
     id_card = models.CharField(max_length=18, verbose_name='身份证号码')
     id_card_posi = models.CharField(max_length=16, verbose_name='身份证正面云链接')
