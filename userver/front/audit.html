@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>人工审核用户</title>
+</head>
+<body>
+<ul class="audit">
+    {% for i in audit_list %}<td>
+
+    <tr>
+
+
+        用户名: <td>{{i.username}}</td><br>
+        真实姓名: <td>{{i.real_name}}</td><br>
+        身份证号码: <td>{{i.id_card}}</td><br>
+        身份证正面照片: <li class="col01"><img src="data:image/jpg;base64,{{i.id_card_posi}}"/></li>
+		身份证反面照片: <li class="col02"><img src="data:image/jpg;base64,{{i.id_card_nega}}"/></li>
+		手持身份证照片: <li class="col03"><img src="data:image/jpg;base64,{{i.hand_card_posi}}"/></li>
+    </tr>
+	{% endfor %}
+    </ul>
+
+    <input type="submit" value="审核失败" class="auditno">
+    <input type="submit" value="审核通过" class="audityes">
+
+
+
+</body>
+</html>

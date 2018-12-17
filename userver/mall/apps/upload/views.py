@@ -51,14 +51,26 @@ class UploadView(View):
 
     def uploadimage(request):
 
-        # <input type="file" name="image1"/># <input type="file" name="image1"/># <input type="file" name="image1"/>
+        # <input type="file" name="image1"/>#
+        # <input type="file" name="image2"/>#
+        # <input type="file" name="image3"/>
 
         if request.POST:
-            if request.method == 'POST':
-                img = Audit(img_url=request.FILES.get('img'))
-                img.save()
 
-        return HttpResponseRedirect('/index/')
+            img1 = request.FILES.get('image1')
+            img2 = request.FILES.get('image2')
+            img3 = request.FILES.get('image3')
+
+            upload = Audit.objects.create(
+
+                id_card_posi=base64.b64encode(img1),
+                id_card_nage=base64.b64encode(img2),
+                hand_card_posi=base64.b64encode(img3)
+            )
+
+
+
+        return JsonResponse('图片上传成功,等待审核', safe=False)
 
 
 
