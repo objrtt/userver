@@ -1,0 +1,70 @@
+WARNING 2018-12-18 17:32:51,318 log 228 Not Found: /
+WARNING 2018-12-18 17:32:51,318 basehttp 136 "GET / HTTP/1.1" 404 2028
+WARNING 2018-12-18 17:33:00,314 log 228 Not Found: /upload
+WARNING 2018-12-18 17:33:00,314 basehttp 136 "GET /upload HTTP/1.1" 404 2064
+WARNING 2018-12-18 17:33:10,996 log 228 Not Found: /upload/
+WARNING 2018-12-18 17:33:10,996 basehttp 136 "GET /upload/ HTTP/1.1" 404 2284
+INFO 2018-12-18 17:34:14,109 basehttp 136 "GET /admin/ HTTP/1.1" 302 0
+INFO 2018-12-18 17:34:14,134 basehttp 136 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1821
+INFO 2018-12-18 17:34:20,038 basehttp 136 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 1953
+INFO 2018-12-18 17:34:20,105 basehttp 136 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 82564
+WARNING 2018-12-18 17:34:36,502 log 228 Not Found: /
+WARNING 2018-12-18 17:34:36,503 basehttp 136 "GET / HTTP/1.1" 404 2028
+WARNING 2018-12-18 17:38:16,457 log 228 Not Found: /
+WARNING 2018-12-18 17:38:16,458 basehttp 136 "GET / HTTP/1.1" 404 2028
+WARNING 2018-12-18 17:38:31,158 log 228 Not Found: /upload
+WARNING 2018-12-18 17:38:31,159 basehttp 136 "GET /upload HTTP/1.1" 404 2064
+WARNING 2018-12-18 17:38:36,432 log 228 Not Found: /upload/
+WARNING 2018-12-18 17:38:36,432 basehttp 136 "GET /upload/ HTTP/1.1" 404 2284
+WARNING 2018-12-18 17:38:46,907 log 228 Not Found: /upload/
+WARNING 2018-12-18 17:38:46,907 basehttp 136 "POST /upload/ HTTP/1.1" 404 2285
+ERROR 2018-12-18 17:39:07,553 log 228 Internal Server Error: /upload/upload/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/u2/.local/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/u2/.local/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/u2/.local/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/u2/Desktop/userver/userver/mall/apps/upload/views.py", line 98, in post
+    serializer.save()
+  File "/home/u2/.local/lib/python3.6/site-packages/rest_framework/serializers.py", line 198, in save
+    "You cannot call `.save()` after accessing `serializer.data`."
+AssertionError: You cannot call `.save()` after accessing `serializer.data`.If you need to access data before committing to the database then inspect 'serializer.validated_data' instead. 
+ERROR 2018-12-18 17:39:07,554 basehttp 136 "POST /upload/upload/ HTTP/1.1" 500 18496
+ERROR 2018-12-18 17:41:33,384 log 228 Internal Server Error: /upload/upload/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/u2/.local/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/u2/.local/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/u2/.local/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/u2/Desktop/userver/userver/mall/apps/upload/views.py", line 98, in post
+    serializer.save()
+  File "/home/u2/.local/lib/python3.6/site-packages/rest_framework/serializers.py", line 198, in save
+    "You cannot call `.save()` after accessing `serializer.data`."
+AssertionError: You cannot call `.save()` after accessing `serializer.data`.If you need to access data before committing to the database then inspect 'serializer.validated_data' instead. 
+ERROR 2018-12-18 17:41:33,384 basehttp 136 "POST /upload/upload/ HTTP/1.1" 500 27
+WARNING 2018-12-18 17:41:43,258 log 228 Not Found: /upload/
+WARNING 2018-12-18 17:41:43,258 basehttp 136 "POST /upload/ HTTP/1.1" 404 81

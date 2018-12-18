@@ -11,7 +11,6 @@
 
     <tr>
 
-
         用户名: <td>{{i.username}}</td><br>
         真实姓名: <td>{{i.real_name}}</td><br>
         身份证号码: <td>{{i.id_card}}</td><br>
@@ -22,8 +21,8 @@
 	{% endfor %}
     </ul>
 
-    <input type="submit" value="审核失败" class="auditno">
-    <input type="submit" value="审核通过" class="audityes">
+    <input type="submit" value="审核失败" method = "get" class="auditno" id="0">
+    <input type="submit" value="审核通过" method = "post" class="audityes" id="1">
 
 
 

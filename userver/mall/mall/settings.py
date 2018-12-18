@@ -38,13 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'audit.apps.AuditConfig',
     'upload.apps.UploadConfig',
     'rest_framework',
 ]
 
+
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -88,8 +88,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'HOST': '127.0.0.1',  # 数据库主机
         'PORT': 3306,  # 数据库端口
-        'USER': 'root',  # 数据库用户名
-        'PASSWORD': 'mysql',  # 数据库用户密码
+        'USER': 'uueoskyc',  # 数据库用户名
+        'PASSWORD': 'uueoskyc',  # 数据库用户密码
         'NAME': 'uuserver'  # 数据库名字
     }
 }
@@ -183,6 +183,7 @@ REST_FRAMEWORK = {
 
         'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.BasicAuthentication',
+
     ),
 }
 
