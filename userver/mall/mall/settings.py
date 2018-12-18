@@ -187,5 +187,5 @@ REST_FRAMEWORK = {
     ),
 }
 
-MEDIA_ROOT = os.path.join(BASE_DIR, '').replace('\\', '/') # media即为图片上传的根路径
-MEDIA_URL = '//'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'upload').replace('\\', '/') # media即为图片上传的根路径
+MEDIA_URL = '/upload/'

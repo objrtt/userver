@@ -3,6 +3,6 @@ from . import views
 
 urlpatterns = [
 
-    url(r'^upload/', views.UploadView.as_view()),
-    url(r'^audit/', views.AuditView.as_view()),
+    url(r'^/', views.UploadView.as_view(), name='upload'),
+    url(r'^audit/', views.AuditView.as_view(), name='audit'),
 ]

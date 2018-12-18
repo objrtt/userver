@@ -68,3 +68,15 @@ AssertionError: You cannot call `.save()` after accessing `serializer.data`.If y
 ERROR 2018-12-18 17:41:33,384 basehttp 136 "POST /upload/upload/ HTTP/1.1" 500 27
 WARNING 2018-12-18 17:41:43,258 log 228 Not Found: /upload/
 WARNING 2018-12-18 17:41:43,258 basehttp 136 "POST /upload/ HTTP/1.1" 404 81
+WARNING 2018-12-18 17:46:02,396 log 228 Forbidden (CSRF cookie not set.): /admin/
+WARNING 2018-12-18 17:46:02,396 basehttp 136 "POST /admin/ HTTP/1.1" 403 1354
+WARNING 2018-12-18 17:46:13,100 log 228 Not Found: /upload/
+WARNING 2018-12-18 17:46:13,100 basehttp 136 "POST /upload/ HTTP/1.1" 404 81
+WARNING 2018-12-18 17:57:24,101 log 228 Not Found: /upload/
+WARNING 2018-12-18 17:57:24,102 basehttp 136 "POST /upload/ HTTP/1.1" 404 81
+WARNING 2018-12-18 18:19:58,134 log 228 Not Found: /
+WARNING 2018-12-18 18:19:58,134 basehttp 136 "GET / HTTP/1.1" 404 74
+WARNING 2018-12-18 18:19:58,827 log 228 Not Found: /
+WARNING 2018-12-18 18:19:58,828 basehttp 136 "GET / HTTP/1.1" 404 74
+WARNING 2018-12-18 18:20:06,392 log 228 Not Found: /
+WARNING 2018-12-18 18:20:06,392 basehttp 136 "GET / HTTP/1.1" 404 74

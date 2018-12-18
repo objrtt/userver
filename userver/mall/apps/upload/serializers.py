@@ -22,11 +22,11 @@ class AuditSerializer(serializers.Serializer):
         fields = ('id','username','real_name','id_card','id_card_posi','id_card_nage','hand_card_posi')
 
 
-    def validate_username(self, value):
-
-        if not re.match('1[3-9]{9}', value):
-            raise serializers.ValidationError('手机号不符合格式')
-        return value
+    # def validate_username(self, value):
+    #
+    #     if not re.match('1[3-9]{9}', value):
+    #         raise serializers.ValidationError('手机号不符合格式')
+    #     return value
 
 
     def validate_id_card(self, value):
@@ -36,21 +36,21 @@ class AuditSerializer(serializers.Serializer):
         return value
 
 
-    # def validate_image(self, attrs):
-    #
-    #     id_card_image1 = attrs.get('id_card_posi')
-    #     id_card_image2 = attrs.get('id_card_nage')
-    #     id_card_image3 = attrs.get('hand_card_posi')
-    #
-    #     # 分别将json转化为byte
-    #     image1 = pickle.dumps('id_card_posi')
-    #     image2 = pickle.dumps('id_card_posi')
-    #     image3 = pickle.dumps('hand_card_posi')
-    #
-    #     # 再用base64加密
-    #     id_card_posi = base64.b64encode('imageq')
-    #     id_card_nage = base64.b64encode('image2')
-    #     hand_card_posi = base64.b64encode('image3')
+    def validate_image(self, attrs):
+
+        id_card_image1 = attrs.get('id_card_posi')
+        id_card_image2 = attrs.get('id_card_nage')
+        id_card_image3 = attrs.get('hand_card_posi')
+
+        # 分别将json转化为byte
+        image1 = pickle.dumps('id_card_posi')
+        image2 = pickle.dumps('id_card_posi')
+        image3 = pickle.dumps('hand_card_posi')
+
+        # 再用base64加密
+        id_card_posi = base64.b64encode('imageq')
+        id_card_nage = base64.b64encode('image2')
+        hand_card_posi = base64.b64encode('image3')
 
 
     def create(self, validated_data):
