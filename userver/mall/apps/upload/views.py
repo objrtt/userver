@@ -9,6 +9,7 @@ from rest_framework.views import APIView
 from .serializers import AuditSerializer
 from rest_framework.response import Response
 
+
 # class UploadView(View):
 #     # 定义上传视图
 #
@@ -106,24 +107,27 @@ class UploadView(APIView):
 class AuditView(View):
 
     # 定义人工审核视图
-    def audit(request,username):
+    def audit(request, username):
 
         audit_list = models.Audit.objects.get(username='username')
 
-        #显示在前端页面
+        # 显示在前端页面
         return render(request, 'audit.html', {"audit_list":audit_list})
 
 
     def audit_pass(request):
+
         if request.method == "GET":
+
             return HttpResponse('审核失败')
 
         elif request.method == 'POST':
+
             a = Audit.objects.get(
                 username='username'
             ).update(audit_pass=True)
 
-            return HttpResponse('审核成功')
+            return HttpResponse(a, msg='审核成功')
 
 
 
@@ -131,3 +135,6 @@ class AuditView(View):
 # https://blog.csdn.net/c_beautiful/article/details/79755368
 # https://blog.csdn.net/Rainbowsmile1/article/details/80403742
 """
+
+
+

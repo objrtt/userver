@@ -189,3 +189,12 @@ REST_FRAMEWORK = {
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'upload').replace('\\', '/') # media即为图片上传的根路径
 MEDIA_URL = '/upload/'
+
+
+# FastDFS
+FDFS_URL = 'http://192.168.0.170:8888/'  # 访问图片的路径域名 ip地址修改为自己机器的ip地址
+FDFS_CLIENT_CONF = os.path.join(BASE_DIR, 'utils/fastdfs/client.conf')
+
+
+# django文件存储
+DEFAULT_FILE_STORAGE = 'mall.utils.fastdfs.storage.FastDFSStorage'
