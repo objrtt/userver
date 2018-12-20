@@ -1,13 +1,14 @@
-import base64
-import pickle
 from django.views.generic import View
-from .models import Audit
+from userver.mall.utils.crypt.crypt import encrypt, decrypt
+from userver.mall.utils.fastdfs.fastdfs import FastDFSStorage
+from userver.mall.utils.get_filename.get_filename import Path_Name_fileExt
+from userver.mall.apps.upload.models import Audit
 from django.http import HttpResponse
-from .models import models
 from django.shortcuts import render
 from rest_framework.views import APIView
 from .serializers import AuditSerializer
 from rest_framework.response import Response
+from userver.mall.mall import settings
 
 
 # class UploadView(View):
@@ -74,29 +75,55 @@ from rest_framework.response import Response
 
 class UploadView(APIView):
 
+
     def post(self,request):
+
         # 接收数据
         data = request.data
+
         # 创建序列化器
         serializer = AuditSerializer(data=data)
+
         # 进行数据验证
         serializer.is_valid(raise_exception=True)
-        # 数据入库
+
+        # 数据提取
+        username = serializer.data.get('username')
+        real_name = serializer.data.get('real_name')
+        id_card = serializer.data.get('id_card')
         id_card_image1 = serializer.data.get('id_card_posi')
         id_card_image2 = serializer.data.get('id_card_nega')
         hand_card_image3 = serializer.data.get('hand_card_posi')
-        # 首先将json字符串转换为bytes类型
-        # 正面
-        image1 = pickle.dumps(id_card_image1)
-        # 反面
-        image2 = pickle.dumps(id_card_image2)
-        # 手持
-        image3 = pickle.dumps(hand_card_image3)
-        # 在用base64对bytes类型的数据进行加密
-        id_card_posi = base64.b64encode(image1)
-        id_card_nega = base64.b64encode(image2)
-        hand_card_posi = base64.b64encode(image3)
-        serializer.save()
+
+        # 提取图片名称
+        image_path1, image_name1, image_extension1 = Path_Name_fileExt(id_card_image1)
+        image_path2, image_name2, image_extension2 = Path_Name_fileExt(id_card_image2)
+        image_path3, image_name3, image_extension3 = Path_Name_fileExt(hand_card_image3)
+
+        # 数据存入fastdfs 返回各自路径,ip
+        id_card_image1_url = FastDFSStorage._save(image_name1, id_card_image1)
+        id_card_image2_url = FastDFSStorage._save(image_name2, id_card_image2)
+        hand_card_image3_url = FastDFSStorage._save(image_name3, hand_card_image3)
+
+        # 对用户上传的各项信息 和 返回路径 加密,bytes
+        username = encrypt(username)
+        real_name = encrypt(real_name)
+        id_card = encrypt(id_card)
+        id_card_posi = encrypt(id_card_image1_url)
+        id_card_naga = encrypt(id_card_image2_url)
+        hand_card_posi = encrypt(hand_card_image3_url)
+
+        # 加密后的数据存入mysql,此时图片类信息为bytes类型
+        data = {
+            username: 'username',
+            real_name: 'real_name',
+            id_card: 'id_card',
+            id_card_posi: 'id_card_posi',
+            id_card_naga: 'id_card_naga',
+            hand_card_posi: 'hand_card_posi',
+            }
+
+        serializer.save(data)
         # 返回响应
         return Response(
             serializer.data
@@ -106,20 +133,46 @@ class UploadView(APIView):
 
 class AuditView(View):
 
+
     # 定义人工审核视图
     def audit(request, username):
 
-        audit_list = models.Audit.objects.get(username='username')
+        # 数据库中提取出各项数据
+        audit_list = Audit.objects.get(username='username')
+
+        # 将数据解密得到原始数据和图片存储路径
+        username = decrypt(audit_list.username)
+        real_name = decrypt(audit_list.real_name)
+        id_card = decrypt(audit_list.id_card)
+        id_card_posi = decrypt(audit_list.id_card_image1_url)
+        id_card_naga = decrypt(audit_list.id_card_image2_url)
+        hand_card_posi = decrypt(audit_list.hand_card_image3_url)
+
+        ip = settings.FDFS_URL
+
+        # 将图片的存储路径补全
+        id_card_posi = ip + id_card_posi
+        id_card_naga = ip + id_card_naga
+        hand_card_posi = ip + hand_card_posi
+
+        data = {
+            username: 'username',
+            real_name: 'real_name',
+            id_card: 'id_card',
+            id_card_posi: 'id_card_posi',
+            id_card_naga: 'id_card_naga',
+            hand_card_posi: 'hand_card_posi',
+        }
 
         # 显示在前端页面
-        return render(request, 'audit.html', {"audit_list":audit_list})
+        return render(request, 'audit.html', data)
 
 
     def audit_pass(request):
 
         if request.method == "GET":
 
-            return HttpResponse('审核失败')
+            return HttpResponse(msg='审核失败')
 
         elif request.method == 'POST':
 

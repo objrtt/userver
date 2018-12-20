@@ -9,13 +9,13 @@ import os
 
 class AuditSerializer(serializers.Serializer):
 
-    # id = serializers.IntegerField(read_only=True, lable='ID')
-    # username = serializers.CharField(max_length=11, label='手机号')
-    # real_name = serializers.CharField(max_length=12, label='真实姓名')
-    # id_card = serializers.CharField(max_length=18, label='身份证号码')
-    # id_card_posi = serializers.CharField(required=True, label='身份证正面照片')
-    # id_card_nage = serializers.CharField(required=True, label='身份证反面照片')
-    # hand_id_posi = serializers.CharField(required=True, label='手持身份证照片')
+    id = serializers.IntegerField(read_only=True, lable='ID')
+    username = serializers.CharField(max_length=11, label='手机号')
+    real_name = serializers.CharField(max_length=12, label='真实姓名')
+    id_card = serializers.CharField(max_length=18, label='身份证号码')
+    id_card_posi = serializers.CharField(required=True, label='身份证正面照片')
+    id_card_nage = serializers.CharField(required=True, label='身份证反面照片')
+    hand_id_posi = serializers.CharField(required=True, label='手持身份证照片')
 
     class Meta:
         model = Audit
@@ -59,4 +59,20 @@ class AuditSerializer(serializers.Serializer):
 
         user.save()
 
+        # 生成token
+        from rest_framework_jwt.settings import api_settings
+
+        jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
+        jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER
+
+        # 1. jwt_paylaod_handler 自动生成一个二进制
+        payload = jwt_payload_handler(user)
+
+        # 2. 需要对 payload 进行编码，编码之后的才是token
+        token = jwt_encode_handler(payload)
+
+        user.token = token
+
         return user
+
+

@@ -32,7 +32,7 @@ class FastDFSStorage(Storage):
         result = client.upload_by_buffer(file_data)
         # 判断上传结果
         if result.get('Status') == 'Upload successed.':
-            # 返回上传的字符串
+            # 返回上传的字符串 路径
             return result.get('Remote file_id')
         else:
             raise Exception('上传失败')
