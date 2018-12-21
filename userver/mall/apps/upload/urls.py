@@ -1,8 +1,8 @@
 from django.conf.urls import url
-from . import views
+from apps.upload import views
 
-urlpatterns = [
+urlpatterns = {
 
     url(r'^/', views.UploadView.as_view(), name='upload'),
     url(r'^audit/', views.AuditView.as_view(), name='audit'),
-]
+}

@@ -1,15 +1,20 @@
 from django.views.generic import View
-from userver.mall.utils.crypt.crypt import encrypt, decrypt
-from userver.mall.utils.fastdfs.fastdfs import FastDFSStorage
-from userver.mall.utils.get_filename.get_filename import Path_Name_fileExt
-from userver.mall.apps.upload.models import Audit
+from crypt1.crypt1 import encrypt, decrypt
+from fastdfs.fastdfs import MyStorage
+from utils.get_filename.get_filename import Path_Name_fileExt
+from apps.upload.models import Audit
 from django.http import HttpResponse
 from django.shortcuts import render
 from rest_framework.views import APIView
 from .serializers import AuditSerializer
 from rest_framework.response import Response
-from userver.mall.mall import settings
+from mall import settings
+from rest_framework.authentication import SessionAuthentication    # 认证管理
+from rest_framework.permissions import IsAuthenticated,AllowAny,IsAdminUser   # 权限管理
 
+import os
+
+print(os.getcwd())
 
 # class UploadView(View):
 #     # 定义上传视图
@@ -75,6 +80,11 @@ from userver.mall.mall import settings
 
 class UploadView(APIView):
 
+    # 认证管理  # 认证管理一般和权限管理配合使用
+    authentication_classes = [SessionAuthentication]
+
+    # 权限管理  # 通过python manager createsuperuser 就可以创建一个管理员账号,登录之后就可以访问
+    permission_classes = [IsAuthenticated]
 
     def post(self,request):
 
@@ -100,18 +110,19 @@ class UploadView(APIView):
         image_path2, image_name2, image_extension2 = Path_Name_fileExt(id_card_image2)
         image_path3, image_name3, image_extension3 = Path_Name_fileExt(hand_card_image3)
 
-        # 数据存入fastdfs 返回各自路径,ip
-        id_card_image1_url = FastDFSStorage._save(image_name1, id_card_image1)
-        id_card_image2_url = FastDFSStorage._save(image_name2, id_card_image2)
-        hand_card_image3_url = FastDFSStorage._save(image_name3, hand_card_image3)
-
-        # 对用户上传的各项信息 和 返回路径 加密,bytes
-        username = encrypt(username)
+        # 对用户上传的各项信息 和 返回路径 加密,得到bytes类型
+        # username = encrypt(username)
         real_name = encrypt(real_name)
         id_card = encrypt(id_card)
-        id_card_posi = encrypt(id_card_image1_url)
-        id_card_naga = encrypt(id_card_image2_url)
-        hand_card_posi = encrypt(hand_card_image3_url)
+        id_card_posi = encrypt(id_card_image1)
+        id_card_naga = encrypt(id_card_image2)
+        hand_card_posi = encrypt(hand_card_image3)
+
+        # 加密后图片存入fastdfs 返回各自路径,ip
+        id_card_posi = MyStorage._save(image_name1, id_card_posi)
+        id_card_naga = MyStorage._save(image_name2, id_card_naga)
+        hand_card_posi = MyStorage._save(image_name3, hand_card_posi)
+
 
         # 加密后的数据存入mysql,此时图片类信息为bytes类型
         data = {
@@ -123,7 +134,7 @@ class UploadView(APIView):
             hand_card_posi: 'hand_card_posi',
             }
 
-        serializer.save(data)
+        serializer.save()
         # 返回响应
         return Response(
             serializer.data
@@ -131,8 +142,11 @@ class UploadView(APIView):
 
 
 
+
 class AuditView(View):
 
+    authentication_classes = [SessionAuthentication]
+    permission_classes = [IsAdminUser]  # 仅管理员用户
 
     # 定义人工审核视图
     def audit(request, username):
@@ -181,6 +195,8 @@ class AuditView(View):
             ).update(audit_pass=True)
 
             return HttpResponse(a, msg='审核成功')
+
+
 
 
 

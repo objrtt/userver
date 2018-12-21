@@ -2,16 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="344e6867-3fb1-4e55-a933-6781cddacc2f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/userver/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/userver/mall/utils/fastdfs/storage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/userver/mall/utils/get_filename/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/userver/mall/utils/get_filename/get_filename.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/userver.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/userver.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userver/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/userver/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userver/.idea/userver.iml" beforeDir="false" afterPath="$PROJECT_DIR$/userver/.idea/userver.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userver/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/userver/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/userver/mall/apps/upload/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/userver/mall/apps/upload/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userver/mall/apps/upload/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/userver/mall/apps/upload/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/userver/mall/apps/upload/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/userver/mall/apps/upload/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userver/mall/utils/crypt/crypt.py" beforeDir="false" afterPath="$PROJECT_DIR$/userver/mall/utils/crypt/crypt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userver/mall/mall/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/userver/mall/mall/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userver/mall/mall/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/userver/mall/mall/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userver/mall/utils/crypt/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/userver/mall/utils/crypt1/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userver/mall/utils/crypt/crypt.py" beforeDir="false" afterPath="$PROJECT_DIR$/userver/mall/utils/crypt1/crypt1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/userver/mall/utils/fastdfs/fastdfs.py" beforeDir="false" afterPath="$PROJECT_DIR$/userver/mall/utils/fastdfs/fastdfs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userver/mall/utils/fastdfs/test1.py" beforeDir="false" afterPath="$PROJECT_DIR$/userver/mall/utils/test1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userver/mall/utils/fastdfs/storage.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,11 +25,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/userver$views.coverage" NAME="views Coverage Results" MODIFIED="1545285747221" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/userver/mall/apps/upload" />
+    <SUITE FILE_PATH="coverage/userver$views.coverage" NAME="views Coverage Results" MODIFIED="1545375478322" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/userver/mall/apps/upload" />
     <SUITE FILE_PATH="coverage/userver$apps.coverage" NAME="apps Coverage Results" MODIFIED="1544781419941" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/userver/mall/apps/upload" />
-    <SUITE FILE_PATH="coverage/userver$crypt.coverage" NAME="crypt Coverage Results" MODIFIED="1545287133137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/userver/mall/utils/crypt" />
+    <SUITE FILE_PATH="coverage/userver$crypt.coverage" NAME="crypt Coverage Results" MODIFIED="1545298423956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/userver/mall/utils/crypt" />
     <SUITE FILE_PATH="coverage/userver$manage.coverage" NAME="manage Coverage Results" MODIFIED="1545274135004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/userver/mall" />
-    <SUITE FILE_PATH="coverage/userver$serializers.coverage" NAME="serializers Coverage Results" MODIFIED="1545122937986" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/userver/mall/apps/upload" />
+    <SUITE FILE_PATH="coverage/userver$serializers.coverage" NAME="serializers Coverage Results" MODIFIED="1545373400419" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/userver/mall/apps/upload" />
     <SUITE FILE_PATH="coverage/userver$test1.coverage" NAME="test1 Coverage Results" MODIFIED="1545277226451" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/userver/mall/utils/fastdfs" />
   </component>
   <component name="DatabaseView">
@@ -45,103 +50,77 @@
     <favorites_list name="userver" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.42271468">
-      <split-first>
-        <leaf>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/userver/mall/utils/fastdfs/fastdfs.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="193">
-                  <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-                  <folding>
-                    <element signature="e#0#45#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/userver/mall/apps/upload/views.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="967">
-                  <caret line="150" lean-forward="true" selection-start-line="150" selection-end-line="150" />
-                  <folding>
-                    <element signature="e#0#13#0" expanded="true" />
-                    <element signature="e#365#390#0" />
-                    <element signature="e#4275#4578#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/userver/mall/utils/crypt/crypt.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="463">
-                  <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
-                  <folding>
-                    <element signature="e#0#29#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/userver/front/audit.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="162">
-                  <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-                  <folding>
-                    <element signature="n#src#0;n#img#0;n#li#0;n#tr#0;n#td#0;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#src#0;n#img#0;n#li#1;n#tr#0;n#td#0;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#src#0;n#img#0;n#li#2;n#tr#0;n#td#0;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/userver/mall/apps/upload/models.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="126">
-                  <caret line="7" column="16" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="16" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/userver/mall/apps/upload/serializers.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="618">
-                  <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
-                  <folding>
-                    <element signature="e#0#13#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/userver/mall/apps/upload/views.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="468">
-                  <caret line="124" lean-forward="true" selection-start-line="124" selection-end-line="124" />
-                  <folding>
-                    <element signature="e#1#38#0" expanded="true" />
-                    <element signature="e#556#581#0" />
-                    <element signature="e#4144#5390#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/userver/mall/apps/upload/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+                <element signature="e#638#663#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///usr/lib/python3.6/crypt.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/userver/mall/utils/fastdfs/fastdfs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-126">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/userver/mall/apps/upload/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="16" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/userver/mall/utils/crypt1/crypt1.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="21" column="11" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="11" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/userver/mall/apps/upload/apps.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/userver/mall/apps/upload/serializers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="630">
+              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -179,24 +158,25 @@
         <option value="$PROJECT_DIR$/userver/mall/apps/upload/models.py" />
         <option value="$PROJECT_DIR$/userver/mall/mall/__init__.py" />
         <option value="$PROJECT_DIR$/userver/mall/utils/exceptions.py" />
-        <option value="$PROJECT_DIR$/userver/mall/apps/upload/urls.py" />
         <option value="$PROJECT_DIR$/userver/mall/utils/fastdfs/client.conf" />
-        <option value="$PROJECT_DIR$/userver/mall/mall/settings.py" />
         <option value="$PROJECT_DIR$/userver/mall/utils/fastdfs/test1.py" />
         <option value="$PROJECT_DIR$/userver/mall/utils/test1.py" />
         <option value="$PROJECT_DIR$/userver/mall/utils/get_filename/get_filename.py" />
-        <option value="$PROJECT_DIR$/userver/mall/apps/upload/serializers.py" />
         <option value="$PROJECT_DIR$/userver/mall/utils/fastdfs/fastdfs.py" />
         <option value="$PROJECT_DIR$/userver/mall/utils/crypt/crypt.py" />
+        <option value="$PROJECT_DIR$/userver/mall/apps/upload/urls.py" />
+        <option value="$PROJECT_DIR$/userver/mall/apps/upload/serializers.py" />
+        <option value="$PROJECT_DIR$/userver/mall/mall/settings.py" />
+        <option value="$PROJECT_DIR$/userver/mall/mall/wsgi.py" />
         <option value="$PROJECT_DIR$/userver/mall/apps/upload/views.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="67" />
-    <option name="y" value="25" />
-    <option name="width" value="1170" />
-    <option name="height" value="1055" />
+  <component name="ProjectFrameBounds" extendedState="4">
+    <option name="x" value="993" />
+    <option name="y" value="27" />
+    <option name="width" value="897" />
+    <option name="height" value="1053" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -206,6 +186,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -222,12 +203,6 @@
               <item name="userver" type="b2602c69:ProjectViewProjectNode" />
               <item name="userver" type="462c0819:PsiDirectoryNode" />
               <item name="userver" type="462c0819:PsiDirectoryNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="userver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="userver" type="462c0819:PsiDirectoryNode" />
-              <item name="userver" type="462c0819:PsiDirectoryNode" />
               <item name="mall" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -242,24 +217,39 @@
               <item name="userver" type="462c0819:PsiDirectoryNode" />
               <item name="userver" type="462c0819:PsiDirectoryNode" />
               <item name="mall" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="upload" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="userver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="userver" type="462c0819:PsiDirectoryNode" />
+              <item name="userver" type="462c0819:PsiDirectoryNode" />
+              <item name="mall" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="crypt1" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/userver" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="userver" is-module-sdk="true" working-directory="$PROJECT_DIR$">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="userver" />
+        <option name="myWorkingDirectory" value="$PROJECT_DIR$" />
+      </console-settings>
+    </option>
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -282,7 +272,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.crypt">
+  <component name="RunManager" selected="Python.views">
     <configuration name="crypt" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="userver" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -418,11 +408,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.crypt" />
         <item itemvalue="Python.views" />
+        <item itemvalue="Python.serializers" />
+        <item itemvalue="Python.crypt" />
         <item itemvalue="Python.test1" />
         <item itemvalue="Python.manage" />
-        <item itemvalue="Python.serializers" />
       </list>
     </recent_temporary>
   </component>
@@ -443,7 +433,11 @@
       <workItem from="1545094356451" duration="9216000" />
       <workItem from="1545111936841" duration="17369000" />
       <workItem from="1545179757020" duration="17378000" />
-      <workItem from="1545266158760" duration="23614000" />
+      <workItem from="1545266158760" duration="26235000" />
+      <workItem from="1545352494906" duration="2997000" />
+      <workItem from="1545363151861" duration="1782000" />
+      <workItem from="1545370999237" duration="1475000" />
+      <workItem from="1545372486524" duration="5696000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1544781962497</created>
@@ -494,11 +488,18 @@
       <option name="project" value="LOCAL" />
       <updated>1545266191577</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="1220">
+      <created>1545297360761</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1545297360761</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95628000" />
+    <option name="totallyTimeSpent" value="110199000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -510,15 +511,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
-    <editor active="true" />
+    <frame x="993" y="27" width="897" height="1053" extended-state="4" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49932525" weight="0.16731302" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49932525" visible="true" weight="0.2320377" />
       <window_info id="Structure" order="1" sideWeight="0.5006748" side_tool="true" weight="0.24232082" />
       <window_info id="Favorites" order="2" sideWeight="0.5006748" side_tool="true" weight="0.24232082" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.20972973" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.20910075" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -527,8 +527,8 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32972974" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.22054054" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32972974" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.2156013" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -568,7 +568,8 @@
     <MESSAGE value="1218" />
     <MESSAGE value="1218-1" />
     <MESSAGE value="1219" />
-    <option name="LAST_COMMIT_MESSAGE" value="1219" />
+    <MESSAGE value="1220" />
+    <option name="LAST_COMMIT_MESSAGE" value="1220" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/userver/front/img.html" />
@@ -590,13 +591,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/rest_framework/fields.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="834">
-          <caret line="95" column="7" lean-forward="true" selection-start-line="95" selection-start-column="7" selection-end-line="95" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/userver/front/upload.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
@@ -609,13 +603,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/userver/mall/apps/upload/admin.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userver/mall/apps/upload/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/userver/mall/apps/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
@@ -656,9 +643,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/userver/mall/mall/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/userver/mall/mall/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
@@ -689,13 +673,6 @@
           <folding>
             <element signature="e#0#75#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userver/mall/apps/upload/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
@@ -735,16 +712,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/userver/mall/apps/upload/models.py">
+    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/rest_framework/fields.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="16" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="16" />
+        <state relative-caret-position="1296">
+          <caret line="936" selection-start-line="936" selection-end-line="936" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/userver/mall/utils/fastdfs/storage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
+        <state relative-caret-position="450">
           <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
           <folding>
             <element signature="e#68#113#0" expanded="true" />
@@ -752,54 +729,94 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/userver/mall/mall/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#221#230#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userver/mall/apps/upload/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.6/dist-packages/django/db/models/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="94" selection-start-line="94" selection-end-line="94" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/userver/mall/mall/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="188" lean-forward="true" selection-start-line="188" selection-end-line="188" />
+        <state relative-caret-position="348">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
           <folding>
             <element signature="e#309#318#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/userver/mall/utils/fastdfs/fastdfs.py">
+    <entry file="file://$PROJECT_DIR$/userver/mall/apps/upload/apps.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userver/mall/utils/crypt/crypt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="126">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/userver/mall/apps/upload/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="618">
-          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+        <state relative-caret-position="630">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/userver/mall/utils/crypt1/crypt1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="21" column="11" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userver/mall/utils/fastdfs/fastdfs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-126">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userver/mall/apps/upload/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3.6/crypt.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/userver/mall/apps/upload/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="124" lean-forward="true" selection-start-line="124" selection-end-line="124" />
+        <state relative-caret-position="324">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
           <folding>
-            <element signature="e#1#38#0" expanded="true" />
-            <element signature="e#556#581#0" />
-            <element signature="e#4144#5390#0" />
+            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#638#663#0" />
           </folding>
         </state>
       </provider>

@@ -24,9 +24,9 @@ sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 SECRET_KEY = 'n&%av(31s&)9&ge(a$q9d@2adeqs@!5@dg=hakk$==#7j4#+&='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -39,17 +39,20 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'upload.apps.UploadConfig',
+
     'rest_framework',
+
+
 ]
 
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
-ALLOWED_HOSTS = ['*']
 
 
 MIDDLEWARE = [
+
+    # cors 实现跨域访问
+    'corsheaders.middleware.CorsMiddleware'
+    
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -77,7 +80,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'mall.wsgi.application'
+# WSGI_APPLICATION = 'mall.wsgi.application'
 
 
 # Database
@@ -181,10 +184,18 @@ REST_FRAMEWORK = {
         # 我们采用JWT认证
         'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
 
-        'rest_framework.authentication.SessionAuthentication',
-        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',  # 基本认证
+        'rest_framework.authentication.BasicAuthentication',  # session认证
+        'rest_framework.permissions.IsAuthenticated',
 
     ),
+}
+
+
+import datetime
+
+JWT_AUTH = {
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(days=1),
 }
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'upload').replace('\\', '/') # media即为图片上传的根路径
@@ -197,4 +208,4 @@ FDFS_CLIENT_CONF = os.path.join(BASE_DIR, 'utils/fastdfs/client.conf')
 
 
 # django文件存储
-DEFAULT_FILE_STORAGE = 'mall.utils.fastdfs.storage.FastDFSStorage'
+DEFAULT_FILE_STORAGE = 'utils.fastdfs.storage.FastDFSStorage'

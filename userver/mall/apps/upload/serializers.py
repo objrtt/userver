@@ -1,25 +1,24 @@
 import base64
 from rest_framework import serializers
-from .models import Audit
+from upload.models import Audit
 import re
 import pickle
-import sys
-import os
 
 
 class AuditSerializer(serializers.Serializer):
 
-    id = serializers.IntegerField(read_only=True, lable='ID')
-    username = serializers.CharField(max_length=11, label='手机号')
-    real_name = serializers.CharField(max_length=12, label='真实姓名')
-    id_card = serializers.CharField(max_length=18, label='身份证号码')
-    id_card_posi = serializers.CharField(required=True, label='身份证正面照片')
-    id_card_nage = serializers.CharField(required=True, label='身份证反面照片')
-    hand_id_posi = serializers.CharField(required=True, label='手持身份证照片')
+    id = serializers.IntegerField(label='ID', read_only=True)
+    username = serializers.CharField(label='手机号', max_length=11)
+    real_name = serializers.CharField(label='真实姓名', max_length=12)
+    id_card = serializers.CharField(label='身份证号码', max_length=18)
+    id_card_posi = serializers.CharField(label='身份证正面照片', required=True, )
+    id_card_nage = serializers.CharField(label='身份证反面照片', required=True, )
+    hand_id_posi = serializers.CharField(label='手持身份证照片', required=True, )
+    token = serializers.CharField(label='登录状态token', read_only=True)  # 增加token字段
 
     class Meta:
         model = Audit
-        fields = ('id','username','real_name','id_card','id_card_posi','id_card_nage','hand_card_posi')
+        fields = ('id','username','real_name','id_card','id_card_posi','id_card_nage','hand_card_posi','token')
 
 
     # def validate_username(self, value):

@@ -32,7 +32,7 @@ def decrypt(file):
 
 if __name__ == '__main__':
 
-    a='eeqw56454wqewqe121@@#'
+    a='group1/M00/00/00/wKgAqlwZ5XuACkd3AAEiLJroysQ71.jpeg'
     a = encrypt(a)
     # a = str(a).split("'")[1].split("'")[0]
     print(a)
